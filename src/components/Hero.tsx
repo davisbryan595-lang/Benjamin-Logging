@@ -19,10 +19,6 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="fade-in-up" style={{ animationDelay: '0.2s' }}>
-          
-        </div>
         <div className="fade-in-up" style={{ animationDelay: '0.4s' }}>
           <h2 className="text-2xl md:text-4xl font-semibold mb-4 text-foreground">
             Reliable Logging & Trucking Services in New York
