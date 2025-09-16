@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Phone } from 'lucide-react';
-import Image from 'next/image';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,12 +25,10 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Image
-              src="/logo.png"   // put your logo in /public
+            <img
+              src="/logo.png"   // place logo.png in your project's public folder
               alt="C. Benjamin Logging Logo"
-              width={160}       // adjust for your design (try 160–180)
-              height={48}       // stays inside the navbar height
-              className="object-contain"
+              className="h-12 w-auto object-contain"
             />
           </div>
 
