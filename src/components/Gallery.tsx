@@ -7,7 +7,8 @@ const galleryImages = [
     id: 1,
     title: "Logging Truck in Action",
     description: "Our heavy-duty logging truck transporting fresh timber",
-    category: "Trucking"
+    category: "Trucking",
+    bgimg: "/servicespics/service7.jpg"
   },
   {
     id: 2,

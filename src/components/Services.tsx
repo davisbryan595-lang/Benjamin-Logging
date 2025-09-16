@@ -1,43 +1,59 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Truck, TreePine, Logs, Zap, Flame, Wrench } from 'lucide-react';
+import { LucideIcon } from "lucide-react";
+
+type Service = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  features: string[];
+  highlight?: boolean;
+  bgImage: string;
+};
 
 const services = [
   {
     icon: TreePine,
     title: "Timber Harvesting & Logging",
     description: "Professional timber harvesting with sustainable forestry practices and modern equipment.",
-    features: ["Selective cutting", "Clear cutting", "Sustainable practices", "Forest management"]
+    features: ["Selective cutting", "Clear cutting", "Sustainable practices", "Forest management"],
+    bgimg:  "/servicespics/service1.jpg"
   },
   {
     icon: Truck,
     title: "Trucking & Heavy Hauling",
     description: "Reliable transportation services for all your heavy hauling needs across New York State.",
-    features: ["Heavy machinery transport", "Timber hauling", "Equipment delivery", "Licensed & insured"]
+    features: ["Heavy machinery transport", "Timber hauling", "Equipment delivery", "Licensed & insured"],
+    bgimg:  "/servicespics/service2.jpg"
   },
   {
     icon: Logs,
     title: "Wood Chip Deliveries",
     description: "High-quality wood chips delivered in 30-yard loads for landscaping and biomass needs.",
     features: ["30-yard loads", "Fresh wood chips", "Bulk pricing", "Scheduled delivery"],
-    highlight: true
+   /* highlight: true,*/
+    bgimg:  "/servicespics/service3.jpg"
   },
   {
     icon: Zap,
     title: "Land Clearing & Forest Management",
     description: "Complete land clearing services for development, agriculture, and forest management.",
-    features: ["Site preparation", "Brush clearing", "Tree removal", "Stump grinding"]
+    features: ["Site preparation", "Brush clearing", "Tree removal", "Stump grinding"],
+    bgimg:  "/servicespics/service4.jpg"
   },
   {
     icon: Flame,
     title: "Firewood Supply",
     description: "Seasoned hardwood firewood cut and split to your specifications.",
-    features: ["Seasoned hardwood", "Cut & split", "Bulk delivery", "Cord measurements"]
+    features: ["Seasoned hardwood", "Cut & split", "Bulk delivery", "Cord measurements"],
+    bgimg:  "/servicespics/service5.jpg"
   },
   {
     icon: Wrench,
     title: "Equipment Contracting",
     description: "Professional logging equipment and operator services for specialized projects.",
-    features: ["Experienced operators", "Modern equipment", "Project consultation", "Flexible scheduling"]
+    features: ["Experienced operators", "Modern equipment", "Project consultation", "Flexible scheduling"],
+    bgimg:  "/servicespics/service6.jpg"
   }
 ];
 
@@ -57,40 +73,58 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <Card 
-                key={index}
-                className={`hover-lift card-gradient border-border ${
-                  service.highlight ? 'border-secondary glow-red' : ''
-                }`}
-              >
-                <CardHeader className="text-center pb-4">
-                  <div className={`mx-auto w-16 h-16 rounded-full flex items-center justify-center mb-4 ${
-                    service.highlight ? 'bg-secondary' : 'bg-primary'
-                  }`}>
-                    <Icon className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-xl font-bold text-foreground">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription className="text-steel-grey-light">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-steel-grey-light">
-                        <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            );
-          })}
+                const Icon = service.icon;
+                return (
+                  <Card
+                    key={index}
+                    className={`relative overflow-hidden group hover-lift border-border ${
+                      service.highlight ? 'border-secondary glow-red' : ''
+                    }`}
+                  >
+                    {/* Background Image */}
+                    <div
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                      style={{ backgroundImage: `url(${service.bgimg})` }}
+                    ></div>
+
+                    {/* Overlay */}
+                    <div
+                      className={`absolute inset-0 ${
+                        service.highlight ? 'bg-secondary/50' : 'bg-black/50'
+                      }`}
+                    ></div>
+
+                    {/* Card Content */}
+                    <div className="relative z-10">
+                      <CardHeader className="text-center pb-4">
+                        <div
+                          className={`mx-auto w-16 h-16 rounded-full flex items-center justify-center mb-4 ${
+                            service.highlight ? 'bg-secondary' : 'bg-primary'
+                          }`}
+                        >
+                          <Icon className="h-8 w-8 text-white" />
+                        </div>
+                        <CardTitle className="text-xl font-bold text-white">
+                          {service.title}
+                        </CardTitle>
+                        <CardDescription className="text-gray-200">
+                          {service.description}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <ul className="space-y-2">
+                          {service.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-center text-gray-200">
+                              <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </div>
+                  </Card>
+                );
+              })}
         </div>
 
         <div className="text-center mt-12">

@@ -24,11 +24,11 @@ const Navigation = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
+          <div className="flex items-center mt-6">
             <img
               src="/logo.png"   // place logo.png in your project's public folder
               alt="Logo"
-              className="h-12 w-auto object-contain"/>
+              className="h-13 w-24 object-contain"/>
           </div>
 
           
