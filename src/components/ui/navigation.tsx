@@ -26,9 +26,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <img
-              src="/logo.png"   // place logo.png in your project's public folder
+              src="/logo2.png"   // place logo.png in your project's public folder
               alt="Logo"
-              className="h-14 w-32  object-cover"
+              className="h-14 w-auto object-cover"
             />
           </div>
 
