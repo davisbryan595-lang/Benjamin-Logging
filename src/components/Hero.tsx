@@ -20,14 +20,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="fade-in-up" style={{ animationDelay: '0.2s' }}>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground">
-            <span className="text-primary">C. Benjamin</span><br />
-            Logging & Trucking
-            <span className="text-secondary"> LLC</span>
-          </h1>
-        </div>
-
+        
         <div className="fade-in-up" style={{ animationDelay: '0.4s' }}>
           <h2 className="text-2xl md:text-4xl font-semibold mb-4 text-foreground">
             Reliable Logging & Trucking Services in New York
