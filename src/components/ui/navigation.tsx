@@ -27,7 +27,7 @@ const Navigation = () => {
           <div className="flex items-center">
             <img
               src="/logo.png"   // place logo.png in your project's public folder
-              alt="C. Benjamin Logging Logo"
+              alt="Logo"
               className="h-12 w-32 object-contain"
             />
           </div>
