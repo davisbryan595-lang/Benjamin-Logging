@@ -92,18 +92,13 @@ const Gallery = () => {
               key={image.id}
               className="hover-lift card-gradient border-border overflow-hidden group cursor-pointer"
             >
-              <div className="aspect-video bg-steel-grey-dark flex items-center justify-center relative overflow-hidden">
-                {/* Placeholder for image */}
-                <div className="w-full h-full bg-gradient-to-br from-steel-grey-dark to-steel-grey opacity-50"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
-                      <span className="text-2xl">🚛</span>
-                    </div>
-                    <p className="text-steel-grey-light">Photo Coming Soon</p>
-                  </div>
-                </div>
-                
+             <div 
+                className="aspect-video relative overflow-hidden group"
+                style={{ backgroundImage: `url(${image.bgimg})`, backgroundSize: "cover", backgroundPosition: "center" }}
+              >
+                {/* Overlay for readability */}
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300"></div>
+
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
                   <span className="bg-secondary px-3 py-1 rounded-full text-xs font-semibold text-white">
@@ -111,6 +106,7 @@ const Gallery = () => {
                   </span>
                 </div>
               </div>
+
               
               <div className="p-6">
                 <h3 className="text-xl font-bold text-foreground mb-2">
