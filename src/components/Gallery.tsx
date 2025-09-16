@@ -14,31 +14,36 @@ const galleryImages = [
     id: 2,
     title: "Timber Harvesting",
     description: "Professional timber harvesting with selective cutting",
-    category: "Logging"
+    category: "Logging",
+    bgimg: "/servicespics/service8.jpg"
   },
   {
     id: 3,
     title: "Wood Chip Loading",
     description: "Loading wood chips for delivery - 30-yard loads available",
-    category: "Wood Chips"
+    category: "Wood Chips",
+    bgimg: "/servicespics/service8.jpg"
   },
   {
     id: 4,
     title: "Forest Management",
     description: "Land clearing and forest management services",
-    category: "Management"
+    category: "Management",
+    bgimg: "/servicespics/service9.jpg"
   },
   {
     id: 5,
     title: "Heavy Equipment",
     description: "Modern logging equipment in operation",
-    category: "Equipment"
+    category: "Equipment",
+    bgimg: "/servicespics/service10.jpg"
   },
   {
     id: 6,
     title: "Completed Project",
     description: "Before and after land clearing project",
-    category: "Projects"
+    category: "Projects",
+    bgimg: "/servicespics/service11.jpg"
   }
 ];
 
