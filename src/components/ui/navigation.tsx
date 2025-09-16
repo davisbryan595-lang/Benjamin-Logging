@@ -28,7 +28,7 @@ const Navigation = () => {
             <img
               src="/logo2.png"   // place logo.png in your project's public folder
               alt="Logo"
-              className="h-8 w-auto object-contain"/>
+              className="h-8 w-12 object-contain"/>
           </div>
 
           
