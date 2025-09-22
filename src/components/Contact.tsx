@@ -188,59 +188,53 @@ const Contact = () => {
                 <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
                 <div className="space-y-6">
                   {/* Phone */}
-                  <a
+                  <a 
                     href="tel:+15182497069"
-                    className="flex items-start space-x-4 group transition-colors"
+                    className="flex items-start space-x-4 hover:text-red-600 transition-colors"
                   >
-                    <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center group-hover:bg-red-600 transition-colors">
+                    <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
                       <Phone className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground group-hover:text-red-600 transition-colors">Phone</h4>
-                      <p className="text-steel-grey-light group-hover:text-red-500 transition-colors">
-                        +1 (518) 249-7069
-                      </p>
+                      <h4 className="font-semibold text-foreground">Phone</h4>
+                      <p className="text-steel-grey-light">+1 (518) 249-7069</p>
                       <p className="text-sm text-steel-grey">Call for immediate assistance</p>
                     </div>
                   </a>
 
                   {/* Email */}
-                  <a
+                  <a 
                     href="mailto:info@cbenjaminlogging.com"
-                    className="flex items-start space-x-4 group transition-colors"
+                    className="flex items-start space-x-4 hover:text-red-600 transition-colors"
                   >
-                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center group-hover:bg-red-600 transition-colors">
+                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
                       <Mail className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground group-hover:text-red-600 transition-colors">Email</h4>
-                      <p className="text-steel-grey-light group-hover:text-red-500 transition-colors">
-                        info@cbenjaminlogging.com
-                      </p>
+                      <h4 className="font-semibold text-foreground">Email</h4>
+                      <p className="text-steel-grey-light">info@cbenjaminlogging.com</p>
                       <p className="text-sm text-steel-grey">We respond within 24 hours</p>
                     </div>
                   </a>
 
                   {/* Location */}
-                  <a
-                    href="https://www.google.com/maps/search/?api=1&query=Lanesville,+New+York"
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=Lanesville+New+York"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-start space-x-4 group transition-colors"
+                    className="flex items-start space-x-4 hover:text-red-600 transition-colors"
                   >
-                    <div className="w-12 h-12 rounded-full bg-forest-green flex items-center justify-center group-hover:bg-red-600 transition-colors">
+                    <div className="w-12 h-12 rounded-full bg-forest-green flex items-center justify-center">
                       <MapPin className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground group-hover:text-red-600 transition-colors">Location</h4>
-                      <p className="text-steel-grey-light group-hover:text-red-500 transition-colors">
-                        Lanesville, New York
-                      </p>
+                      <h4 className="font-semibold text-foreground">Location</h4>
+                      <p className="text-steel-grey-light">Lanesville, New York</p>
                       <p className="text-sm text-steel-grey">Serving the greater NY region</p>
                     </div>
                   </a>
 
-                  {/* Hours (static, no hover) */}
+                  {/* Hours (static) */}
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 rounded-full bg-steel-grey flex items-center justify-center">
                       <Clock className="h-6 w-6 text-white" />
@@ -256,15 +250,16 @@ const Contact = () => {
               </CardContent>
             </Card>
 
+            {/* Social Media & Quick Contact */}
             <Card className="card-gradient border-border">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-foreground mb-4">Connect With Us</h3>
                 <div className="space-y-4">
                   <a 
-                    href="https://www.facebook.com/Lanesville-New-York-112890455391840/"
+                    href="https://www.facebook.com/p/C-Benjamin-Trucking-And-Logging-100054390165466/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-3 text-steel-grey-light hover:text-primary transition-colors"
+                    className="flex items-center space-x-3 text-steel-grey-light hover:text-red-600 transition-colors"
                   >
                     <Facebook className="h-6 w-6" />
                     <span>Follow us on Facebook</span>
