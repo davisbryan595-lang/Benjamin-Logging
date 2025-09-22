@@ -22,10 +22,10 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://www.facebook.com/Lanesville-New-York-112890455391840/"
+                href="https://www.facebook.com/p/C-Benjamin-Trucking-And-Logging-100054390165466/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors"
+                className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-red-600 transition-colors"
               >
                 <Facebook className="h-5 w-5 text-white" />
               </a>
@@ -36,46 +36,16 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li>
-                <button 
-                  onClick={() => scrollToSection('home')}
-                  className="text-steel-grey-light hover:text-primary transition-colors"
-                >
-                  Home
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('services')}
-                  className="text-steel-grey-light hover:text-primary transition-colors"
-                >
-                  Services
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('about')}
-                  className="text-steel-grey-light hover:text-primary transition-colors"
-                >
-                  About Us
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('gallery')}
-                  className="text-steel-grey-light hover:text-primary transition-colors"
-                >
-                  Gallery
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('contact')}
-                  className="text-steel-grey-light hover:text-primary transition-colors"
-                >
-                  Contact
-                </button>
-              </li>
+              {['home','services','about','gallery','contact'].map((id) => (
+                <li key={id}>
+                  <button 
+                    onClick={() => scrollToSection(id)}
+                    className="text-steel-grey-light hover:text-red-600 transition-colors"
+                  >
+                    {id.charAt(0).toUpperCase() + id.slice(1)}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -85,15 +55,32 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-secondary" />
-                <span className="text-steel-grey-light">(518) 734-XXXX</span>
+                <a
+                  href="tel:+15182497069"
+                  className="text-steel-grey-light hover:text-red-600 transition-colors"
+                >
+                  (518) 249-7069
+                </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-secondary" />
-                <span className="text-steel-grey-light">info@cbenjaminlogging.com</span>
+                <a
+                  href="mailto:info@cbenjaminlogging.com"
+                  className="text-steel-grey-light hover:text-red-600 transition-colors"
+                >
+                  info@cbenjaminlogging.com
+                </a>
               </li>
               <li className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-secondary" />
-                <span className="text-steel-grey-light">Lanesville, New York</span>
+                <a
+                  href="https://www.google.com/maps/place/Lanesville,+New+York"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-steel-grey-light hover:text-red-600 transition-colors"
+                >
+                  Lanesville, New York
+                </a>
               </li>
             </ul>
           </div>
