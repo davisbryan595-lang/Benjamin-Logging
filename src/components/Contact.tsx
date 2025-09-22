@@ -45,13 +45,11 @@ const Contact = () => {
       return;
     }
 
-    // Simulate sending form (here you'd call an API or backend)
     toast({
       title: "Appointment Request Submitted!",
       description: "We'll contact you within 24 hours to confirm your appointment.",
     });
 
-    // Reset form
     setFormData({
       name: '',
       phone: '',
@@ -76,7 +74,7 @@ const Contact = () => {
           </p>
         </div>
 
-        {/* Grid Layout */}
+        {/* Two-column grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <Card className="card-gradient border-border">
@@ -127,7 +125,7 @@ const Contact = () => {
                   />
                 </div>
 
-                {/* Service Select */}
+                {/* Service */}
                 <div className="flex flex-col space-y-2">
                   <Label className="text-steel-grey-light">Service Needed *</Label>
                   <Select value={formData.service} onValueChange={handleServiceChange}>
@@ -183,10 +181,87 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-          {/* Contact Info (unchanged) */}
+          {/* Contact Info + Socials */}
           <div className="space-y-8">
-            {/* Phone / Email / Location / Hours */}
-            {/* ... your existing Contact Info and Social cards here ... */}
+            <Card className="card-gradient border-border">
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+                      <Phone className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground">Phone</h4>
+                      <p className="text-steel-grey-light">+1 (518) 249-7069</p>
+                      <p className="text-sm text-steel-grey">Call for immediate assistance</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                      <Mail className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground">Email</h4>
+                      <p className="text-steel-grey-light">info@cbenjaminlogging.com</p>
+                      <p className="text-sm text-steel-grey">We respond within 24 hours</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-full bg-forest-green flex items-center justify-center">
+                      <MapPin className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground">Location</h4>
+                      <p className="text-steel-grey-light">Lanesville, New York</p>
+                      <p className="text-sm text-steel-grey">Serving the greater NY region</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-full bg-steel-grey flex items-center justify-center">
+                      <Clock className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground">Hours</h4>
+                      <p className="text-steel-grey-light">Mon - Fri: 7:00 AM - 6:00 PM</p>
+                      <p className="text-steel-grey-light">Sat: 8:00 AM - 4:00 PM</p>
+                      <p className="text-sm text-steel-grey">Emergency services available</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="card-gradient border-border">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-foreground mb-4">Connect With Us</h3>
+                <div className="space-y-4">
+                  <a 
+                    href="https://www.facebook.com/Lanesville-New-York-112890455391840/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-3 text-steel-grey-light hover:text-primary transition-colors"
+                  >
+                    <Facebook className="h-6 w-6" />
+                    <span>Follow us on Facebook</span>
+                  </a>
+                  <div className="pt-4 border-t border-border">
+                    <Button 
+                      asChild
+                      className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground py-3 glow-red"
+                    >
+                      <a href="tel:+15182497069">
+                        <Phone className="mr-2 h-5 w-5" />
+                        Call Now for Immediate Service
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
