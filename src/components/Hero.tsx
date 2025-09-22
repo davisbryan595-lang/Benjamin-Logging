@@ -22,7 +22,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center">
+      <div className="relative z-10 text-center px-4">
         <div className="fade-in-up" style={{ animationDelay: '0.4s' }}>
           <h2 className="text-2xl md:text-4xl font-semibold mb-4 text-foreground">
             Reliable Logging & Trucking Services in New York
@@ -30,7 +30,7 @@ const Hero = () => {
         </div>
 
         <div className="fade-in-up" style={{ animationDelay: '0.6s' }}>
-          <p className="text-xl md:text-2xl mb-8 text-steel-grey-light max-w-3xl mx-auto">
+          <p className="text-lg md:text-2xl mb-8 text-steel-grey-light max-w-3xl mx-auto">
             From timber hauling to wood chip delivery, we've got you covered.
           </p>
         </div>
@@ -62,10 +62,16 @@ const Hero = () => {
           </a>
         </div>
 
+        {/* Call Us Directly Box */}
         <div className="fade-in-up" style={{ animationDelay: '1s' }}>
           <div className="bg-card/80 backdrop-blur-sm rounded-lg p-6 inline-block border border-border">
             <p className="text-steel-grey-light mb-2">Call us directly:</p>
-            <p className="text-3xl font-bold text-secondary">(518) 249-7069</p>
+            <a
+              href="tel:+15182497069"
+              className="block text-2xl md:text-3xl font-bold text-secondary hover:underline hover:text-secondary/80 transition"
+            >
+              (518) 249-7069
+            </a>
           </div>
         </div>
       </div>
