@@ -39,6 +39,7 @@ const Hero = () => {
           className="fade-in-up flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
           style={{ animationDelay: '0.8s' }}
         >
+          {/* Book Appointment Button */}
           <Button
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg glow-green"
@@ -47,20 +48,24 @@ const Hero = () => {
             <Calendar className="mr-2 h-5 w-5" />
             Book Appointment
           </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground px-8 py-4 text-lg glow-red"
-          >
-            <Phone className="mr-2 h-5 w-5" />
-            Call Now
-          </Button>
+
+          {/* Call Now Button */}
+          <a href="tel:+15182497069">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground px-8 py-4 text-lg glow-red"
+            >
+              <Phone className="mr-2 h-5 w-5" />
+              Call Now
+            </Button>
+          </a>
         </div>
 
         <div className="fade-in-up" style={{ animationDelay: '1s' }}>
           <div className="bg-card/80 backdrop-blur-sm rounded-lg p-6 inline-block border border-border">
             <p className="text-steel-grey-light mb-2">Call us directly:</p>
-            <p className="text-3xl font-bold text-secondary">(518) 734-XXXX</p>
+            <p className="text-3xl font-bold text-secondary">(518) 249-7069</p>
           </div>
         </div>
       </div>
