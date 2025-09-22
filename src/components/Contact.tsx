@@ -187,39 +187,60 @@ const Contact = () => {
               <CardContent className="p-6">
                 <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
                 <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+                  {/* Phone */}
+                  <a
+                    href="tel:+15182497069"
+                    className="flex items-start space-x-4 group transition-colors"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center group-hover:bg-red-600 transition-colors">
                       <Phone className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">Phone</h4>
-                      <p className="text-steel-grey-light">+1 (518) 249-7069</p>
+                      <h4 className="font-semibold text-foreground group-hover:text-red-600 transition-colors">Phone</h4>
+                      <p className="text-steel-grey-light group-hover:text-red-500 transition-colors">
+                        +1 (518) 249-7069
+                      </p>
                       <p className="text-sm text-steel-grey">Call for immediate assistance</p>
                     </div>
-                  </div>
+                  </a>
 
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                  {/* Email */}
+                  <a
+                    href="mailto:info@cbenjaminlogging.com"
+                    className="flex items-start space-x-4 group transition-colors"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center group-hover:bg-red-600 transition-colors">
                       <Mail className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">Email</h4>
-                      <p className="text-steel-grey-light">info@cbenjaminlogging.com</p>
+                      <h4 className="font-semibold text-foreground group-hover:text-red-600 transition-colors">Email</h4>
+                      <p className="text-steel-grey-light group-hover:text-red-500 transition-colors">
+                        info@cbenjaminlogging.com
+                      </p>
                       <p className="text-sm text-steel-grey">We respond within 24 hours</p>
                     </div>
-                  </div>
+                  </a>
 
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 rounded-full bg-forest-green flex items-center justify-center">
+                  {/* Location */}
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Lanesville,+New+York"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start space-x-4 group transition-colors"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-forest-green flex items-center justify-center group-hover:bg-red-600 transition-colors">
                       <MapPin className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">Location</h4>
-                      <p className="text-steel-grey-light">Lanesville, New York</p>
+                      <h4 className="font-semibold text-foreground group-hover:text-red-600 transition-colors">Location</h4>
+                      <p className="text-steel-grey-light group-hover:text-red-500 transition-colors">
+                        Lanesville, New York
+                      </p>
                       <p className="text-sm text-steel-grey">Serving the greater NY region</p>
                     </div>
-                  </div>
+                  </a>
 
+                  {/* Hours (static, no hover) */}
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 rounded-full bg-steel-grey flex items-center justify-center">
                       <Clock className="h-6 w-6 text-white" />
