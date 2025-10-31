@@ -57,7 +57,7 @@ const Contact = () => {
       title: 'Sending your request...',
       description: 'Please wait a moment.',
     });
-    // Form will POST to FormSubmit.co – no further JS needed
+    // Form will submit to FormSubmit.co
   };
 
   return (
@@ -90,12 +90,7 @@ const Contact = () => {
                 onSubmit={handleSubmit}
                 className="space-y-6"
               >
-                {/* ----- FormSubmit hidden fields ----- */}
-                <input
-                  type="hidden"
-                  name="_next"
-                  value="https://yourdomain.com/thanks"  
-                />
+                {/* FormSubmit Settings – Uses default thank-you page */}
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
                 <input
@@ -171,7 +166,6 @@ const Contact = () => {
                       <SelectItem value="other">Other / Multiple Services</SelectItem>
                     </SelectContent>
                   </Select>
-                  {/* Hidden input so FormSubmit receives the selected value */}
                   <input type="hidden" name="service" value={formData.service} />
                 </div>
 
@@ -241,7 +235,7 @@ const Contact = () => {
                     </div>
                   </a>
 
-                  {/* Email – updated address */}
+                  {/* Email – Updated */}
                   <a
                     href="mailto:cwbtrucking@aol.com"
                     className="flex items-start space-x-4 hover:text-red-600 transition-colors"
