@@ -1,10 +1,6 @@
 import { Facebook, Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <footer className="bg-steel-grey-dark text-foreground py-12">
@@ -38,12 +34,18 @@ const Footer = () => {
             <ul className="space-y-2">
               {['home','services','about','gallery','contact'].map((id) => (
                 <li key={id}>
-                  <button 
-                    onClick={() => scrollToSection(id)}
+                  <a
+                    href={`/#${id}`}
+                    onClick={(event) => {
+                      if (window.location.pathname === '/') {
+                        event.preventDefault();
+                        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
                     className="text-steel-grey-light hover:text-red-600 transition-colors"
                   >
                     {id.charAt(0).toUpperCase() + id.slice(1)}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>

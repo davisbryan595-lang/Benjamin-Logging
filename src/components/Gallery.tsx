@@ -92,7 +92,9 @@ const Gallery = () => {
               key={image.id}
               className="hover-lift card-gradient border-border overflow-hidden group cursor-pointer"
             >
-             <div 
+             <div
+                role="img"
+                aria-label={`${image.title}: ${image.description}`}
                 className="aspect-video relative overflow-hidden group"
                 style={{ backgroundImage: `url(${image.bgimg})`, backgroundSize: "cover", backgroundPosition: "center" }}
               >
