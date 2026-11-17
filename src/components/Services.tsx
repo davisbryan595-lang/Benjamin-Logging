@@ -83,6 +83,8 @@ const Services = () => {
                   >
                     {/* Background Image */}
                     <div
+                      role="img"
+                      aria-label={`${service.title}: ${service.description}`}
                       className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                       style={{ backgroundImage: `url(${service.bgimg})` }}
                     ></div>

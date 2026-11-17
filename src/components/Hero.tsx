@@ -15,6 +15,8 @@ const Hero = () => {
     >
       {/* Background Image with Overlay */}
       <div
+        role="img"
+        aria-label="Logging truck working among the forests of New York"
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
